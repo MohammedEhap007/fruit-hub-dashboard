@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-void buildErrorBar(BuildContext context, String message) {
+void buildBar(BuildContext context, String message, {bool isErrorBar = false}) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
-      backgroundColor: Colors.red,
+      backgroundColor: isErrorBar ? Colors.red : Colors.green,
       elevation: 0.0,
       duration: const Duration(seconds: 3),
       behavior: SnackBarBehavior.floating,

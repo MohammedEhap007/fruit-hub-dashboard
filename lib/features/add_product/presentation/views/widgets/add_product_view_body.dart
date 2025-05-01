@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub_dashboard/core/helper/build_error_bar.dart';
+import 'package:fruit_hub_dashboard/core/helper/build_bar.dart';
 import 'package:fruit_hub_dashboard/core/widgets/custom_button.dart';
 import 'package:fruit_hub_dashboard/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub_dashboard/features/add_product/domain/entities/add_product_entity.dart';
@@ -94,7 +94,11 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       setState(() {});
                     }
                   } else {
-                    buildErrorBar(context, 'Please Select An Image');
+                    buildBar(
+                      context,
+                      'Please Select An Image',
+                      isErrorBar: true,
+                    );
                   }
                 },
                 text: 'Add Product',
