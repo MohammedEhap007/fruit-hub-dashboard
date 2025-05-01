@@ -6,6 +6,7 @@ import 'package:fruit_hub_dashboard/core/helper/build_bar.dart';
 import 'package:fruit_hub_dashboard/core/widgets/custom_button.dart';
 import 'package:fruit_hub_dashboard/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub_dashboard/features/add_product/domain/entities/add_product_entity.dart';
+import 'package:fruit_hub_dashboard/features/add_product/domain/entities/review_entity.dart';
 import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/image_field.dart';
 import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/is_featured_check_box.dart';
 import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/is_organic_check_box.dart';
@@ -119,6 +120,16 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                         expirationMonths: expirationMonths,
                         numberOfCalories: numberOfCalories,
                         unitAmount: unitAmount,
+                        reviews: [
+                          ReviewEntity(
+                            name: 'Ahmed',
+                            rating: 5,
+                            date: DateTime.now().toIso8601String(),
+                            image:
+                                'https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_hybrid&w=740',
+                            reviewDescription: 'Good Product',
+                          ),
+                        ],
                       );
                       context.read<AddProductCubit>().addProduct(input);
                     } else {

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import '../../domain/entities/add_product_entity.dart';
+import 'review_model.dart';
 
 class AddProductModel {
   final String name;
@@ -14,6 +15,7 @@ class AddProductModel {
   final bool isOrganic;
   final int numberOfCalories;
   final int unitAmount;
+  final List<ReviewModel> reviews;
 
   AddProductModel({
     required this.name,
@@ -26,6 +28,7 @@ class AddProductModel {
     required this.isOrganic,
     required this.numberOfCalories,
     required this.unitAmount,
+    required this.reviews,
     this.imageUrl,
   });
 
@@ -42,6 +45,10 @@ class AddProductModel {
       isOrganic: addProductEntity.isOrganic,
       numberOfCalories: addProductEntity.numberOfCalories,
       unitAmount: addProductEntity.unitAmount,
+      reviews:
+          addProductEntity.reviews
+              .map((e) => ReviewModel.fromEntity(e))
+              .toList(),
     );
   }
 
@@ -57,6 +64,7 @@ class AddProductModel {
       'isOrganic': isOrganic,
       'numberOfCalories': numberOfCalories,
       'unitAmount': unitAmount,
+      'reviews': reviews.map((e) => e.toJson()).toList(),
     };
   }
 }
