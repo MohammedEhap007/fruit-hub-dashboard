@@ -10,6 +10,10 @@ class AddProductModel {
   final File image;
   final bool isFeatured;
   String? imageUrl;
+  final int expirationMonths;
+  final bool isOrganic;
+  final int numberOfCalories;
+  final int unitAmount;
 
   AddProductModel({
     required this.name,
@@ -18,6 +22,10 @@ class AddProductModel {
     required this.price,
     required this.image,
     required this.isFeatured,
+    required this.expirationMonths,
+    required this.isOrganic,
+    required this.numberOfCalories,
+    required this.unitAmount,
     this.imageUrl,
   });
 
@@ -30,6 +38,10 @@ class AddProductModel {
       image: addProductEntity.image,
       isFeatured: addProductEntity.isFeatured,
       imageUrl: addProductEntity.imageUrl,
+      expirationMonths: addProductEntity.expirationMonths,
+      isOrganic: addProductEntity.isOrganic,
+      numberOfCalories: addProductEntity.numberOfCalories,
+      unitAmount: addProductEntity.unitAmount,
     );
   }
 
@@ -41,6 +53,10 @@ class AddProductModel {
       'price': price,
       'isFeatured': isFeatured,
       'imageUrl': imageUrl,
+      'expirationMonths': expirationMonths,
+      'isOrganic': isOrganic,
+      'numberOfCalories': numberOfCalories,
+      'unitAmount': unitAmount,
     };
   }
 }
