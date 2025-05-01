@@ -16,6 +16,7 @@ void main() async {
   await dotenv.load(fileName: ".env");
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await SupabaseStorageService.initSupabase();
+  await SupabaseStorageService.createBuckets('fruits_images');
   setupGetIt();
   runApp(const FruitHubDashboard());
 }

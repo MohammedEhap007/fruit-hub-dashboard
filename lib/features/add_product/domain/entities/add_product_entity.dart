@@ -1,6 +1,6 @@
 import 'dart:io';
 
-class AddProductInputEntity {
+class AddProductEntity {
   final String name;
   final String code;
   final String description;
@@ -9,7 +9,7 @@ class AddProductInputEntity {
   final bool isFeatured;
   String? imageUrl;
 
-  AddProductInputEntity({
+  AddProductEntity({
     required this.name,
     required this.code,
     required this.description,
