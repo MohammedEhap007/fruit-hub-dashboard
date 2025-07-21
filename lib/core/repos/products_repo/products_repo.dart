@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:fruit_hub_dashboard/core/errors/failures.dart';
-import 'package:fruit_hub_dashboard/features/add_product/domain/entities/add_product_entity.dart';
+import 'package:fruit_hub_dashboard/features/add_product/domain/entities/product_entity.dart';
 
 abstract class ProductsRepo {
   Future<Either<Failure, void>> addProducts(
-    AddProductEntity addProductEntity,
+    ProductEntity addProductEntity,
   );
 }

@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import '../../domain/entities/add_product_entity.dart';
+import '../../domain/entities/product_entity.dart';
 import 'review_model.dart';
 
-class AddProductModel {
+class ProductModel {
   final String name;
   final String code;
   final String description;
@@ -17,7 +17,7 @@ class AddProductModel {
   final int unitAmount;
   final List<ReviewModel> reviews;
 
-  AddProductModel({
+  ProductModel({
     required this.name,
     required this.code,
     required this.description,
@@ -32,8 +32,8 @@ class AddProductModel {
     this.imageUrl,
   });
 
-  factory AddProductModel.fromEntity(AddProductEntity addProductEntity) {
-    return AddProductModel(
+  factory ProductModel.fromEntity(ProductEntity addProductEntity) {
+    return ProductModel(
       name: addProductEntity.name,
       code: addProductEntity.code,
       description: addProductEntity.description,
