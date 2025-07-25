@@ -23,7 +23,7 @@ class AddProductView extends StatelessWidget {
                 getIt.get<ImagesRepo>(),
                 getIt.get<ProductsRepo>(),
               ),
-          child: AddProductViewBodyBlocConsumer(),
+          child: const AddProductViewBodyBlocConsumer(),
         ),
       ),
     );

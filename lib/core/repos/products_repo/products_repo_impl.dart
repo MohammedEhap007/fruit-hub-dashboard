@@ -22,7 +22,7 @@ class ProductsRepoImpl implements ProductsRepo {
       );
       return const Right(null);
     } catch (e) {
-      return Left(ServerFailure('Failed to add product'));
+      return const Left(ServerFailure('Failed to add product'));
     }
   }
 }

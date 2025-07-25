@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fruit_hub_dashboard/core/helper/build_bar.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
@@ -27,7 +28,8 @@ class _ImageFieldState extends State<ImageField> {
           try {
             await pickImage();
           } catch (e) {
-            // TODO
+            // ignore: use_build_context_synchronously
+            buildBar(context, 'Failed to pick image', isErrorBar: true);
           }
           isLoading = false;
           setState(() {});
@@ -46,7 +48,7 @@ class _ImageFieldState extends State<ImageField> {
                         borderRadius: BorderRadius.circular(16),
                         child: Image.file(imageFile!),
                       )
-                      : Icon(Icons.image_outlined, size: 180),
+                      : const Icon(Icons.image_outlined, size: 180),
             ),
             Visibility(
               visible: imageFile != null,
@@ -56,7 +58,7 @@ class _ImageFieldState extends State<ImageField> {
                   widget.onFileChanged(imageFile);
                   setState(() {});
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.delete_forever_rounded,
                   color: Colors.red,
                   size: 32,

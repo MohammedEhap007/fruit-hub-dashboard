@@ -20,7 +20,7 @@ class ImagesRepoImpl implements ImagesRepo {
       );
       return Right(url);
     } catch (e) {
-      return Left(ServerFailure('Failed to upload image'));
+      return const Left(ServerFailure('Failed to upload image'));
     }
   }
 }

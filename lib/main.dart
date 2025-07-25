@@ -13,7 +13,7 @@ import 'core/services/supabase_storage_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = CustomBlocObserver();
-  await dotenv.load(fileName: ".env");
+  await dotenv.load();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await SupabaseStorageService.initSupabase();
   await SupabaseStorageService.createBuckets('fruits_images');
