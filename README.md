@@ -1,16 +1,29 @@
-# fruit_hub_dashboard
+# 🧺 Fruit Hub Dashboard
 
-A new Flutter project.
+The **Fruit Hub Dashboard** is a Flutter-based admin panel designed for managing the product catalog of the **Fruit Hub** e-commerce app. With this tool, admins can seamlessly add, update, and organize fruit products.
 
-## Getting Started
+## 🧩 Overview
 
-This project is a starting point for a Flutter application.
+This lightweight dashboard allows administrators to:
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ Add new fruits to the store
+- 🖼 Upload product images
+- 🏷 Set product attributes like:
+  - Name
+  - Price
+  - Expiration period
+  - Calories
+  - Product Code
+  - Description
+  - Organic / Featured flags
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📸 Screenshots
+<img width="8744" height="3200" alt="Group 1" src="https://github.com/user-attachments/assets/6261518b-adf6-4e7d-87c7-129816319d1b" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ⚙️ Tech Stack
+
+- **Framework:** Flutter (Dart)
+- **Image Picker:** `image_picker` Package
+- **State Management:** Bloc
+- **Storage:** Supabase Storage
+- **Backend Integration:** Firebase Firestore / Supabase
